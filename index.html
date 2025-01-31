@@ -3,97 +3,241 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página Monetizada</title>
+  <title>Team Fraude - APEX</title>
   <style>
-    /* Estilos básicos */
-    body { font-family: Arial, sans-serif; }
-    .tab { overflow: hidden; border: 1px solid #ccc; background-color: #f1f1f1; }
-    .tab button { background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s; }
-    .tab button:hover { background-color: #ddd; }
-    .tabcontent { display: none; padding: 6px 12px; border: 1px solid #ccc; border-top: none; }
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8f0; /* Fondo verde claro */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #2e8b57; /* Verde oscuro */
+      margin-bottom: 20px;
+      font-size: 2.5em;
+    }
+
+    .container {
+      background-color: #ffffff; /* Fondo blanco */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 1000px; /* Aumentamos el ancho máximo */
+      margin: 20px 0;
+    }
+
+    .tab {
+      overflow: hidden;
+      border: 1px solid #2e8b57; /* Verde oscuro */
+      background-color: #e0f0e0; /* Verde claro */
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 1em;
+      color: #2e8b57; /* Verde oscuro */
+    }
+
+    .tab button:hover {
+      background-color: #c0e0c0; /* Verde más claro */
+    }
+
+    .tab button.active {
+      background-color: #2e8b57; /* Verde oscuro */
+      color: white;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      border: 1px solid #2e8b57; /* Verde oscuro */
+      border-top: none;
+      border-radius: 0 0 5px 5px;
+      background-color: #f0f8f0; /* Verde claro */
+    }
+
+    input[type="date"] {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      max-width: 300px;
+      border: 1px solid #2e8b57; /* Verde oscuro */
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #2e8b57; /* Verde oscuro */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #3cb371; /* Verde más claro */
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #2e8b57; /* Verde oscuro */
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px; /* Aumentamos la altura */
+      border: none;
+      border-radius: 5px;
+    }
+
+    a {
+      color: #2e8b57; /* Verde oscuro */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
-<div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Form')">Google Form</button>
-  <button class="tablinks" onclick="openTab(event, 'Sheet')">Google Sheet</button>
-  <button class="tablinks" onclick="openTab(event, 'Calculator')">Calculadora</button>
-</div>
+  <!-- Título -->
+  <h1>Equipo Fraude - APX</h1>
 
-<div id="Form" class="tabcontent">
-  <h3>Google Form</h3>
-  <a href="https://forms.gle/tu-enlace-de-google-form" target="_blank">Ir al Google Form</a>
-</div>
+  <!-- Contenedor principal -->
+  <div class="container">
+    <!-- Pestañas -->
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'GoogleForms')">📄 Formulario de Casos</button>
+      <button class="tablinks" onclick="openTab(event, 'GoogleForms2')">📄 Formulario Reporte</button>
+      <button class="tablinks" onclick="openTab(event, 'GoogleSheets')">📗 Library</button>
+      <button class="tablinks" onclick="openTab(event, 'DateDiff')">📆 Diferencia de Fechas</button>
+      <button class="tablinks" onclick="openTab(event, 'AgeCalc')">📆 Calculadora de Edad</button>
+    </div>
 
-<div id="Sheet" class="tabcontent">
-  <h3>Google Sheet</h3>
-  <iframe src="https://docs.google.com/spreadsheets/d/e/tu-enlace-de-google-sheet/pubhtml?widget=true&amp;headers=false" width="100%" height="500px"></iframe>
-</div>
+    <!-- Contenido de las pestañas -->
+    <div id="GoogleForms" class="tabcontent">
+      <h2>Formulario de casos</h2>
+      <p>Completa el formulario a continuación:</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQr0ALUjNKY_fSffEeEAyVVsDT7lNZXAAkyfxcmMcgMNxWcw/viewform?usp=header/viewform?embedded=true" width="100%" height="600px">Cargando…</iframe>
+    </div>
+    <div id="GoogleForms2" class="tabcontent">
+        <h2>Formulario reports</h2>
+        <p>Completa el formulario a continuación:</p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQr0ALUjNKY_fSffEeEAyVVsDT7lNZXAAkyfxcmMcgMNxWcw/viewform?usp=header/viewform?embedded=true" width="100%" height="600px">Cargando…</iframe>
+      </div>
 
-<div id="Calculator" class="tabcontent">
-  <h3>Calculadora</h3>
-  <div id="calculator">
-    <input type="text" id="display" disabled>
-    <div>
-      <button onclick="clearDisplay()">C</button>
-      <button onclick="appendToDisplay('7')">7</button>
-      <button onclick="appendToDisplay('8')">8</button>
-      <button onclick="appendToDisplay('9')">9</button>
-      <button onclick="appendToDisplay('/')">/</button>
+    <div id="GoogleSheets" class="tabcontent">
+      <h2>Google Sheets</h2>
+      <p>Aquí puedes ver la hoja de cálculo incrustada:</p>
+      <iframe src="https://docs.google.com/spreadsheets/d/1JBNR2m-46lzQRhqq8YYaejehINA3XGjGDSSTdK9yMo8/edit?usp=sharing/pubhtml?widget=true&amp;headers=false"></iframe>
     </div>
-    <div>
-      <button onclick="appendToDisplay('4')">4</button>
-      <button onclick="appendToDisplay('5')">5</button>
-      <button onclick="appendToDisplay('6')">6</button>
-      <button onclick="appendToDisplay('*')">*</button>
+
+    <div id="DateDiff" class="tabcontent">
+      <h2>Calculadora de Diferencia de Fechas</h2>
+      <label for="date1">Fecha 1:</label>
+      <input type="date" id="date1">
+      <br>
+      <label for="date2">Fecha 2:</label>
+      <input type="date" id="date2">
+      <br>
+      <button onclick="calculateDateDifference()">Calcular Diferencia</button>
+      <div class="result" id="dateDiffResult"></div>
     </div>
-    <div>
-      <button onclick="appendToDisplay('1')">1</button>
-      <button onclick="appendToDisplay('2')">2</button>
-      <button onclick="appendToDisplay('3')">3</button>
-      <button onclick="appendToDisplay('-')">-</button>
-    </div>
-    <div>
-      <button onclick="appendToDisplay('0')">0</button>
-      <button onclick="appendToDisplay('.')">.</button>
-      <button onclick="calculateResult()">=</button>
-      <button onclick="appendToDisplay('+')">+</button>
+
+    <div id="AgeCalc" class="tabcontent">
+      <h2>Calculadora de Edad</h2>
+      <label for="birthDate">Fecha de Nacimiento:</label>
+      <input type="date" id="birthDate">
+      <br>
+      <button onclick="calculateAge()">Calcular Edad</button>
+      <div class="result" id="ageResult"></div>
     </div>
   </div>
-</div>
 
-<script>
-  function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+  <script>
+    // Función para cambiar entre pestañas
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
     }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+
+    // Función para calcular la diferencia entre dos fechas
+    function calculateDateDifference() {
+      const date1 = document.getElementById("date1").value;
+      const date2 = document.getElementById("date2").value;
+
+      if (!date1 || !date2) {
+        alert("Por favor, selecciona ambas fechas.");
+        return;
+      }
+
+      const dateObj1 = new Date(date1);
+      const dateObj2 = new Date(date2);
+
+      const timeDiff = Math.abs(dateObj2 - dateObj1);
+      const dayDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+      document.getElementById("dateDiffResult").innerText = `Días de diferencia: ${dayDiff}`;
     }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
 
-  function appendToDisplay(value) {
-    document.getElementById('display').value += value;
-  }
+    // Función para calcular la edad
+    function calculateAge() {
+      const birthDate = document.getElementById("birthDate").value;
 
-  function clearDisplay() {
-    document.getElementById('display').value = '';
-  }
+      if (!birthDate) {
+        alert("Por favor, selecciona tu fecha de nacimiento.");
+        return;
+      }
 
-  function calculateResult() {
-    try {
-      document.getElementById('display').value = eval(document.getElementById('display').value);
-    } catch (e) {
-      document.getElementById('display').value = 'Error';
+      const birthDateObj = new Date(birthDate);
+      const today = new Date();
+
+      let age = today.getFullYear() - birthDateObj.getFullYear();
+      const monthDiff = today.getMonth() - birthDateObj.getMonth();
+
+      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDateObj.getDate())) {
+        age--;
+      }
+
+      document.getElementById("ageResult").innerText = `Tu edad es: ${age} años`;
     }
-  }
-</script>
 
+    // Abrir la primera pestaña por defecto
+    document.getElementById("GoogleForms").style.display = "block";
+    document.getElementsByClassName("tablinks")[0].className += " active";
+  </script>
 </body>
 </html>
