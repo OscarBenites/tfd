@@ -32,7 +32,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       width: 90%;
-      max-width: 1000px; /* Aumentamos el ancho máximo */
+      max-width: 1500px; /* Aumentamos el ancho máximo */
       margin: 20px 0;
     }
 
@@ -41,7 +41,7 @@
       border: 1px solid #2e8b57; /* Verde oscuro */
       background-color: #e0f0e0; /* Verde claro */
       border-radius: 5px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     .tab button {
@@ -122,6 +122,12 @@
     a:hover {
       text-decoration: underline;
     }
+    .calculatorapp{
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   </style>
 </head>
 <body>
@@ -142,13 +148,11 @@
 
     <!-- Contenido de las pestañas -->
     <div id="GoogleForms" class="tabcontent">
-      <h2>Formulario de Casos</h2>
-      <p>CFormulario a completar para el registro de casos:</p>
+      <!--h2>Formulario de Casos</h2>
+      <p>CFormulario a completar para el registro de casos:</p-->
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScr1z_LxIrqtYqtELB77Hw1nGdoz6ffFpVtz9tQ1wYoyFViCQ/viewform?usp=header/viewform?embedded=true" width="100%" height="600px">Cargando…</iframe>
     </div>
     <div id="GoogleForms2" class="tabcontent">
-        <h2>Formulario de Reporte</h2>
-        <p>Formulario de reporte ante mala gestión o derivación:</p>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQr0ALUjNKY_fSffEeEAyVVsDT7lNZXAAkyfxcmMcgMNxWcw/viewform?usp=header/viewform?embedded=true" width="100%" height="600px">Cargando…</iframe>
       </div>
 
@@ -157,25 +161,31 @@
     </div>
 
     <div id="DateDiff" class="tabcontent">
-      <h2>Calculadora de Diferencia de Fechas</h2>
-      <label for="date1">Fecha desde:</label>
-      <input type="date" id="date1">
-      <br>
-      <label for="date2">Fecha hasta:</label>
-      <input type="date" id="date2">
-      <br>
-      <button onclick="calculateDateDifference()">Calcular Diferencia</button>
-      <div class="result" id="dateDiffResult"></div>
+<div class="calculatorapp">
+    <h2>Calculadora de Diferencia de Fechas</h2>
+    <p>Recuerda que, si es igual o menor a 90 días es Fraude directo</p>
+    <label for="date1">Fecha desde:</label>
+    <input type="date" id="date1">
+    <br>
+    <label for="date2">Fecha hasta:</label>
+    <input type="date" id="date2">
+    <br>
+    <button onclick="calculateDateDifference()">Calcular Diferencia</button>
+    <div class="result" id="dateDiffResult"></div>
+</div>
     </div>
 
     <div id="AgeCalc" class="tabcontent">
-      <h2>Calculadora de Edad</h2>
-      <label for="birthDate">Fecha de Nacimiento:</label>
-      <input type="date" id="birthDate">
-      <br>
-      <button onclick="calculateAge()">Calcular Edad</button>
-      <div class="result" id="ageResult"></div>
-    </div>
+<div class="calculatorapp">
+    <h2>Calculadora de Edad</h2>
+    <p>Recuerda que si el cliente es menor de edad y paga con efectivo es Fraude directo. En caso sea con tarjeta u otro medio online de igual forma se solicita DNI del apoderado</p>
+    <label for="birthDate">Fecha de Nacimiento:</label>
+    <input type="date" id="birthDate">
+    <br>
+    <button onclick="calculateAge()">Calcular Edad</button>
+    <div class="result" id="ageResult"></div>
+  </div>
+</div>
   </div>
 
   <script>
